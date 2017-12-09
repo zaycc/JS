@@ -1,0 +1,9 @@
+https://api.coinmarketcap.com/v1/ticker/?start=0&limit=100
+
+const http = new XMLHttpRequest()
+
+http.open("GET", "https://api.coinmarketcap.com/v1/ticker/?start=0&limit=250");   
+
+http.send()
+
+http.onload = () => console.log(http.responseText)

@@ -1,9 +1,12 @@
-https://api.coinmarketcap.com/v1/ticker/?start=0&limit=100
+var apilink = "https://api.coinmarketcap.com/v1/ticker/?start=0&limit=100";
+console.log(apilink);
 
-const http = new XMLHttpRequest()
 
-http.open("GET", "https://api.coinmarketcap.com/v1/ticker/?start=0&limit=250");   
+var fillInStuff = function(resp){
+    console.log(resp);
+    // do the actual stuff here
+};
 
-http.send()
-
-http.onload = () => console.log(http.responseText)
+fetch(apilink).then(function(response){
+    fillInStuff(response);
+});
